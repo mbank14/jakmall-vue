@@ -59,6 +59,8 @@ export default {
     box-shadow: 0 8px 8px -4px khaki;
     background :white;
 
+    
+
 .main__content
   grid-template-columns: 2fr 1fr;
 

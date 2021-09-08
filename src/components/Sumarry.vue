@@ -2,7 +2,7 @@
   <div class="container summary" id="summary">
       <!-- <h1>ii summary</h1> -->
       <!-- summary payment -->
-      <div>
+      <div class="mt-2">
           <slot name="summary-payment">
               <h1>Summary</h1>
               <span>10 item purchased</span>
@@ -41,7 +41,7 @@
               <p>{{ shipment }}</p>
           </div>
           </slot>
-          <button-base :type="'btn btn-wide'" disabled>Continue to payment</button-base>
+          <button-base :type="'btn btn-wide'" @click="handleNext()">Continue to payment</button-base>
       </div>
   </div>
 </template>
@@ -67,16 +67,26 @@ export default
       },
 
       components: { ButtonBase },
+    
 
+    methods:{
+        handleNext(){
+            
+        }
+    }
 }
 </script>
 
 <style lang="stylus">
 .summary
-    border-left : 1px solid
+    border-left : 1.5px solid rgba(0,0,0,.3);
     margin-top : 1rem;
     margin-bottom :1rem;
     padding-bottom :.78rem;
+
+    @media screen and (max-width: 570px)
+        border-top : 1.5px solid rgba(0,0,0,.3);
+        border-left: 0;
 
 .summary__item-payment
     padding: 2rem 0

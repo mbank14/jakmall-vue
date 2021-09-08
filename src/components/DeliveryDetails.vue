@@ -85,6 +85,9 @@ props:{
     min-height :370px;
     flex-direction :column;
     justify-content  :center;
+    
+    @media screen and (max-width: 570px)
+        min-height :auto;
 
 .form-item
     flex-direction : column

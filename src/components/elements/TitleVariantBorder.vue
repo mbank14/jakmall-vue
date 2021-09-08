@@ -36,5 +36,6 @@ export default {
     background : rgba(0,0,0,.1);
     border-radius : .5rem;
     z-index : 1;
-
+    @media screen and (max-width: 570px)
+        width : 200px;
 </style>
