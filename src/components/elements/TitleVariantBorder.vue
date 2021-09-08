@@ -1,10 +1,13 @@
 <template>
-  <div>
+  <div class="title-display-1" style="position:relative;">
       <slot>
+          <div class="line"></div>
+          <div class="z-top">
+
           <p>
               {{titleText}}
           </p>
-          <hr>
+          </div>
       </slot>
   </div>
 </template>
@@ -20,6 +23,18 @@ export default {
 }
 </script>
 
-<style>
-    
+<style lang="stylus">
+.z-top
+    position :relative
+    z-index : 10;
+
+.line
+    position :absolute;
+    bottom : .2rem;
+    height : 10px;
+    width : 300px;
+    background : rgba(0,0,0,.1);
+    border-radius : .5rem;
+    z-index : 1;
+
 </style>
