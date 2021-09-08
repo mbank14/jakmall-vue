@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       koko: "lolo",
-      actived: 3,
+      actived: 1,
     };
   },
 
