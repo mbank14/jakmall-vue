@@ -8,7 +8,20 @@ export default new Vuex.Store({
     // next payment
     actived: 1,
     
-    dropshippingFee: 5900,
+    emailCus: '',
+    emailCusIsValid: false,
+    phoneNumberCus: '',
+    phoneNumberCusIsValid: false,
+    addressCus: '',
+    addressCusIsValid: false,
+    dropshipperName: '',
+    dropshipperNameIsValid: false,
+    dropshipperPhoneNumber: '',
+    dropshipperPhoneNumberIsValid: false,
+
+    checkDropshipper: false,
+    dropshippingFee: 0,
+    shipmentFee: 0,
     costTotal:50000,
     total: 0,
 
@@ -49,7 +62,47 @@ export default new Vuex.Store({
 
 
   },
-  mutations: {},
+
+  getters: {
+    
+  },
+
+  mutations: {
+    increment: (state) =>{
+       state.actived++
+    },
+
+    setDropshippingFee: (state,payload) => {
+      state.dropshippingFee = payload;
+    },
+
+    setShipmentFee: (state,payload) => {
+      state.shipmentFee = payload;
+    },
+
+    setPhoneNumberCus: (state, payload) => {
+      state.phoneNumberCus = payload
+    },
+    setAddressCus: (state, payload) => {
+      state.addressCus = payload
+    },
+    setEmailCus: (state, payload) => {
+      state.emailCus = payload
+    },
+    setDropshipperName: (state, payload) => {
+      state.dropshipperName = payload
+    },
+    setDropshipperPhoneNumber: (state, payload) => {
+      state.dropshipperPhoneNumber = payload
+    },
+    setDropshipperPhoneNumberValid: (state, payload) => {
+      state.dropshipperPhoneNumberIsValid = payload
+    },
+
+    setCheckDropshipper: (state, paylaod) => {
+      state.checkDropshipper = paylaod;
+    }
+  },
   actions: {},
   modules: {},
 });

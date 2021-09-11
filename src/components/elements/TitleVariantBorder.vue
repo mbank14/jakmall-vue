@@ -1,5 +1,5 @@
 <template>
-  <div class="title-display-1" style="position:relative;">
+  <div class="title-display-1 mb-2 mt-1" style="position:relative;">
       <slot>
           <div class="line"></div>
           <div class="z-top">
