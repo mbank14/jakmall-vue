@@ -39,6 +39,10 @@
           <p>{{ shipmentName }} shipment</p>
           <p>{{ shipment }}</p>
         </div>
+        <div class="summary__item-cost mb-1-5 mt-1-5">
+          <h1>Total </h1>
+          <h1>{{ total }}</h1>
+        </div>
       </slot>
       <button-base :type="'btn btn-wide'" @click-button="handleNext()"
         >Continue to sa</button-base
@@ -175,5 +179,6 @@ export default {
 .summary__item-cost {
   display: flex;
   justify-content: space-between;
+  padding : .5rem 0;
 }
 </style>

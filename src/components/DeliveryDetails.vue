@@ -56,10 +56,14 @@
     <div v-else-if="active == 2">
       <div>
         <!-- Delivery -->
-        <div></div>
+        <div  class="mb-5 mt-2">
+          <radio-payment :titleText="'Delivery'" :options="radioDataShipment"></radio-payment>
+        </div>
 
         <!-- Payment -->
-        <div></div>
+        <div class="mb-5 mt-2">
+          <radio-payment :titleText="'Payment'" :options="radioDataPayment" ></radio-payment>
+        </div>
       </div>
     </div>
 
@@ -88,15 +92,17 @@
 
 <script>
 import TitleVariantBorder from "./elements/TitleVariantBorder.vue";
+import RadioPayment from './RadioPayment.vue';
 export default {
   data() {
     return {
       msg: [],
       checkDropshipperStatus: this.checkDropshipper,
+      // paymentMethods: this.radioDataShipment[0].name,
     };
   },
 
-  components: { TitleVariantBorder },
+  components: { TitleVariantBorder, RadioPayment },
   props: {
     active: {
       type: Number,
@@ -109,6 +115,14 @@ export default {
   },
 
   computed: {
+
+      radioDataShipment(){
+          return this.$store.state.shipmentMethods
+      },
+      radioDataPayment (){
+        return this.$store.state.paymentMethods
+      },
+
       phoneNumberCus: {
           get(){
               return this.$store.state.phoneNumberCus

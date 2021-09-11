@@ -22,7 +22,7 @@ export default new Vuex.Store({
     checkDropshipper: false,
     dropshippingFee: 0,
     shipmentFee: 0,
-    costTotal:50000,
+    costTotal: 50000,
     total: 0,
 
     deliveryTime: 1,

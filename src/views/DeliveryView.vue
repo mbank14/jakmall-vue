@@ -9,12 +9,13 @@
         </div>
 
         <!-- summary -->
-        <div>
+        <div >
           <sumarry
             :shipmentName="'Gojek'"
             :dropshippingFee="this.$store.state.dropshippingFee"
             :costTotal="50000"
             :shipment="1222"
+            :total="getTotal"
           ></sumarry>
         </div>
       </div>
@@ -37,9 +38,9 @@ export default {
   },
 
   computed: {
-    // dropshippingFee () {
-    //   return this.$store.state.dropshippingFee;
-    // }
+    getTotal () {
+      return this.$store.state.total;
+    }
   },
 
   methods: {
